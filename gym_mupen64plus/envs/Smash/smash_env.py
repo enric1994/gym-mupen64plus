@@ -128,31 +128,14 @@ class SmashEnv(Mupen64PlusEnv):
         self._wait(count=150, wait_for='Splash Screen')
         self._press_button(ControllerState.START_BUTTON)
         self._wait(count=30, wait_for='Load Main Menu')
-        # Select Versus Mode
-        self._press_button(ControllerState.JOYSTICK_DOWN)
+        # Select Training Mode
+
         self._press_button(ControllerState.START_BUTTON)
-        # Set time to infinity
-        self._wait(count=30, wait_for='Load VS Menu')
+        self._wait(count=30, wait_for='Load 1P mode')
         self._press_button(ControllerState.JOYSTICK_DOWN)
-        self._press_button(ControllerState.JOYSTICK_DOWN)
-        self._press_button(ControllerState.JOYSTICK_LEFT)
-        self._press_button(ControllerState.JOYSTICK_LEFT)
-        self._press_button(ControllerState.JOYSTICK_LEFT)
-        # Turn off items.
-        self._press_button(ControllerState.JOYSTICK_DOWN)
+        
         self._press_button(ControllerState.START_BUTTON)
-        self._wait(count=30, wait_for='Load Options Menu')
-        self._press_button(ControllerState.JOYSTICK_UP)
-        self._press_button(ControllerState.START_BUTTON)
-        self._wait(count=30, wait_for='Load Items Menu')
-        self._press_button(ControllerState.JOYSTICK_LEFT)
-        self._press_button(ControllerState.JOYSTICK_LEFT)
-        self._press_button(ControllerState.JOYSTICK_LEFT)
-        self._press_button(ControllerState.B_BUTTON)
-        self._wait(count=30, wait_for='Back From Items Menu')
-        self._press_button(ControllerState.B_BUTTON)
-        self._wait(count=30, wait_for='Back From Options Menu')
-        self._press_button(ControllerState.JOYSTICK_DOWN)
+        self._wait(count=30, wait_for='Load training mode')
         self._press_button(ControllerState.START_BUTTON)
         self._wait(count=125, wait_for='Load Character Screen')
 

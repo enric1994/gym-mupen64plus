@@ -8,8 +8,10 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    environment:
+      - DISPLAY=unix:1
     volumes:
       - ./:/src
     network_mode: "host"
     runtime: nvidia
-    command: python example.py
+    command: tail -f /dev/null
